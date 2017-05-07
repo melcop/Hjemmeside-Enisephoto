@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Enise Photo Hjemmeside</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/billede.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/testbil.css">
+	<meta  name="viewport" content="width=device-width, initial-scale=1.8">
+	    <script type="text/javascript">
+
+       function openWin(img){
+
+           var path = "images/"
+
+           window.open(path+img,"mywin","menubar=0,resizable=0,width=767,height=510")
+                            }
+    </script>
+    <title>Open Window</title>
+</head>
+<body class="body">
+
+	<header class="mainHeader">
+		<img src="img/logo.gif">
+		
+		<nav><ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="forum/entrar.php">Login</a></li>
+			<li class="active"><a href="billedeex.html">Billeder</a></li>
+			<li><a href="forum/index.php">Forum</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul></nav>
+	</header>
+	
+	<div class="mainContent">
+		<div class="content">
+			<article class="topcontent">
+				<header>
+					<h2>Billeder</h2>
+					
+				</header>
+				
+				<footer>
+					<p class="post-info"> Klik for at forstørre billedet </p>
+				</footer>
+	
+				<content>
+					<ul class="rig columns-4">
+						<li>
+							
+							<a href="javascript:openWin('pri_001.jpg')" target="_blank">
+							<img src="images/pri_001.jpg"> 
+							</a> 
+							<h3>Image Title</h3>
+						</li>
+						<li>
+							<a href="javascript:openWin('pri_002.jpg')" target="_blank">
+							<img src="images/pri_002.jpg"> 
+							</a>
+							<h3>Image Title</h3>
+						</li>
+						<li>
+							<a href="javascript:openWin('pri_003.jpg')" target="_blank">
+							<img src="images/pri_003.jpg"> 
+							</a>
+							<h3>Image Title</h3>
+						</li>
+						<li>
+							<a href="javascript:openWin('pri_004.jpg')" target="_blank">
+							<img src="images/pri_004.jpg"> 
+							</a>
+							<h3>Image Title</h3>
+						</li>
+						<li>
+							<a href="javascript:openWin('pri_005.jpg')" target="_blank">
+							<img src="images/pri_005.jpg"> 
+							</a>
+							<h3>Image Title</h3>
+						</li>
+						<li>
+							<a href="javascript:openWin('pri_006.jpg')" target="_blank">
+							<img src="images/pri_006.jpg"> 
+							</a>
+							<h3>Image Title</h3>
+						</li>
+					</ul>
+				</content>
+			</article>
+		</div>
+	</div>
+	
+	<footer class="mainFooter">
+		<h4><font color="white">Kontakt Info</h4></font>
+							<p><font color="white"></font>
+							b&aelig;kkelunden 4,2660 Br&oslash;ndby Strand<br> 
+							+45 5230 0187<br> 
+							mail@ademphotography.dk</p>
+	</footer>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.grid-nav li a').on('click', function(event){
+			event.preventDefault();
+			$('.grid-container').fadeOut(500, function(){
+				$('#' + gridID).fadeIn(500);
+			});
+			var gridID = $(this).attr("data-id");
+			
+			$('.grid-nav li a').removeClass("active");
+			$(this).addClass("active");
+		});
+	});
+	</script>
+</body>
+
+</html>  
